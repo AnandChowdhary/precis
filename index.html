@@ -36,14 +36,88 @@
 						<span class="nav-item nav-link domain-name"></span>
 					</div>
 					<div class="nav navbar-nav float-xs-right">
-						<a class="nav-item nav-link" href="#">About</a>
 						<a class="nav-item nav-link" href="#">Log out</a>
 					</div>
 				</div>
 			</nav>
 		</header>
 
-		<main>
+		<main class="analytics-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="card back-btn">
+							<div class="card-block">
+								<h1 class="card-title">&lt;</h1>
+								<p class="card-text">Go back</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="card">
+							<div class="card-block">
+								<h1 class="card-title" data-totalvisitors><span class="light">0</span></h1>
+								<p class="card-text">total visitors</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="card">
+							<div class="card-block">
+								<h1 class="card-title" data-uniquevisitors><span class="light">0</span></h1>
+								<p class="card-text">unique visitors</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="card">
+							<div class="card-block">
+								<h1 class="card-title" data-referrers><span class="light">0</span></h1>
+								<p class="card-text">total referrers</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="card">
+							<div class="card-block">
+								<h1 class="card-title" data-ureferrers><span class="light">0</span></h1>
+								<p class="card-text">unique referrers</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="card">
+							<div class="card-block">
+								<h1 class="card-title" data-uagents><span class="light">0</span></h1>
+								<p class="card-text">user agents</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card ma-to">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>IP Address</th>
+								<th>Datetime</th>
+								<th>User Agent</th>
+								<th>Referrer</th>
+							</tr>
+						</thead>
+						<tbody data-infoanalytics>
+							<tr class="light">
+								<td>192.168.1.1</td>
+								<td>Friday 2 December 2016 03:27:05 PM</td>
+								<td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</td>
+								<td>https://valmiki.oswald.foundation/</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+
+		<main class="card-content">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -51,7 +125,7 @@
 							<div class="card-block">
 								<form class="shorten-form">
 									<div class="input-group">
-										<input type="url" class="form-control shorten-url" placeholder="Paste your URL here&hellip;" value="http://google.com" required>
+										<input type="url" class="form-control shorten-url" placeholder="Paste your URL here&hellip;" required>
 										<span class="input-group-btn">
 											<button class="btn btn-primary" type="submit">Shorten</button>
 										</span>
@@ -60,7 +134,7 @@
 							</div>
 						</div>
 						<div class="card ma-to">
-							<div class="card-block table-limited">
+							<div class="table-limited">
 								<table class="table">
 									<thead>
 										<tr>
@@ -113,10 +187,15 @@
 								</div>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row ma-bo">
 							<div class="col-md-6">
 								<div class="card">
-									<div class="card-block"><div id="circle"></div></div>
+									<div class="card-block">
+										<h5 class="card-title">Recent Visitors</h5>
+										<ul class="list-unstyled" data-recentip>
+											<li class="light">192.168.1.1</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -130,10 +209,28 @@
 								</div>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-block">
+										<h5 class="card-title">Pr&eacute;cis</h5>
+										<ul>
+											<li>Pr&eacute;cis is a URL shortener; it converts a regular URL into a condensed format.</li>
+											<li>It&rsquo;s made by Anand Chowdhary on an API hosted on the CDN <a href="https://oswald.host">Oswald Host</a>.</li>
+											<li>It&rsquo;s free and open sourced on <a href="https://github.com/AnandChowdhary/precis">Github</a>.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</main>
+
+		<footer>
+			&copy; 2016 Pr&eacute;cis by Anand Chowdhary
+		</footer>
 
 		<!-- Scripts -->
 		<script src="assets/jquery.js"></script>

@@ -1,0 +1,37 @@
+::selection {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+main {
+	margin-top: 30px;
+}
+
+h1.card-title {
+	font-weight: lighter;
+}
+
+.light {
+	opacity: 0.25;
+}
+
+.ma-bo {
+	margin-bottom: 20px;
+}
+.ma-to {
+	margin-top: 30px;
+}
+
+.card .table th {
+	border-top: 0;
+}
+.card .table {
+	margin-bottom: 0;
+}
+
+.big {
+	transform: scale(1.2);
+}
+
+.shorten-url {
+	transition: 0.3s;
+}

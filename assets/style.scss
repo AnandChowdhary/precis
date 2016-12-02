@@ -11,7 +11,7 @@ h1.card-title {
 }
 
 .light {
-	opacity: 0.25;
+	opacity: 0.3;
 }
 
 .ma-bo {
@@ -34,4 +34,22 @@ h1.card-title {
 
 .shorten-url {
 	transition: 0.3s;
+}
+
+.card ul {
+	margin-bottom: 0;
+}
+
+.table-limited {
+	max-height: 700px;
+	overflow: hidden;
+	position: relative;
+}
+
+.glare {
+	position: absolute;
+	bottom: 70px;
+	left: 0; right: 0;
+	height: 100px;
+	background: linear-gradient(transparent, #fff);
 }

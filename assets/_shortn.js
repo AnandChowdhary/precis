@@ -1,13 +1,12 @@
 const Precis = {
-	create: "http://localhost/shorten.php",
-	analyze: "http://localhost/analytics.php"
+	analyze: "https://oswald.host/api/external/precis/analytics"
 };
 
 const domain = document.domain;
 
 let shortenURL = (url) => {
 	$(".shorten-url").attr("disabled", "true");
-	$.ajax({url: Precis.create + "?url=" + url + "&creator=" + domain, success: (result) => {
+	$.ajax({url: Precis.analyze + "?uri=" + encodeURIComponent(url.replace("https://", "SSLPROTOCOL").replace("http://", "UNSECUREDPROTOCOL")) + "&creator=" + domain + "&newurl=1", success: (result) => {
 		$(".shorten-url").removeAttr("disabled");
 		$(".shorten-url").val(location.protocol + "//" + domain + "/" + result).select();
 		let urlx = url.replace("https://", "").replace("http://", "").replace("www.", "").substring(0, 20) + "...";
